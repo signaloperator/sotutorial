@@ -1,0 +1,12 @@
+tutorial-1-i2c-at24c01
+
+i2cscan (Scan for I2C slave devices, 50 is AT24C01)
+i2cwrite @50 00 nostop (Address 00)
+i2cread @50 04 stop (Read 04 bytes)
+i2cwrite @50 00 F0 F1 F2 F3 stop (Write F0 F1 F2 F3 to address 00)
+i2cwrite @50 01 AA BB stop (Write AA BB to address 01)
+i2cwrite @50 00 nostop (Address 00)
+i2cread @50 04 stop (Read 04 bytes)
+
+(All numbers are hex)
+(Text between "(" and ")" is comment)

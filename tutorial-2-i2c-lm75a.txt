@@ -1,0 +1,11 @@
+tutorial-2-i2c-lm75a
+
+i2cscan (Scan for I2C slave devices, 48 is LM75A)
+i2cwrite @48 00 nostop (Address 00, Temperature)
+i2cread @48 02 stop (Two bytes of data)
+
+(Numbers are hex)
+(D0 to D6, 7 LSB bits, are useless)
+(LSB is +0.5°C)
+(  (0x1360>>7)*0.5 = 19°C  )
+(Text between "(" and ")" is comment)

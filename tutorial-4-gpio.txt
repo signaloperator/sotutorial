@@ -1,0 +1,11 @@
+tutorial-4-gpio
+
+pinwrite @07 H (Write high to pin 07, which is connected to pin 08)
+pinread @08 (Read pin 08)
+pinwrite @07 L (Write low to pin 07, which is connected to pin 08)
+pinread @08 (Read pin 08)
+pinwrite @07 H (Write high to pin 07, which is connected to pin 08)
+pinread @08 (Read pin 08)
+
+(Numbers are hex)
+(Text between "(" and ")" is comment)

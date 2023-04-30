@@ -1,0 +1,12 @@
+tutorial-3-spi-w25q128
+
+spi @0AM0 03 00 00 00 FF FF FF FF (Read 4 bytes from address 00 00 00)
+spi @0AM0 06 (Enable writing)
+spi @0AM0 02 00 00 00 11 22 33 44  (Write 4 bytes to address 00 00 00)
+spi @0AM0 03 00 00 00 FF FF FF FF (Read 4 bytes from address 00 00 00)
+
+(Numbers are hex)
+(Text between "(" and ")" is comment)
+("@0AM0" means: SS pin 0A(10 DEC), MSB first, SPI mode 0)
+(Another example: "@0BL2" means SS pin 0B, LSB first, SPI mode 2)
+(Command to erase the chip: Enable writing, then: spi @0AM0 C7)
